@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="My 2020CV list projects" />
+	<meta name="keywords" content="2020CV" />
+	<meta name="author" content="khan" />
+	<link rel="shortcut icon" type="image/png" href="./content/images/play.png">
+	<title>sound</title>
+	<link rel="stylesheet" href="./assets/css/base.css">
+</head>
+
+<body data-barba="wrapper">
+	<div class="menu">
+		<audio id="myAudio" ontimeupdate="onTimeUpdate()">
+			<source id="source-audio" src="" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+
+		<div class="player-ctn">
+            <div class="player-panel-ctn">
+                <div class="infos-ctn">
+                    <div class="timer">00:00</div>
+                    <div class="title"></div>
+                    <div class="duration">00:00</div>
+                </div>
+                <div id="player-progress-ctn">
+                    <div id="player-progress-bar-ctn"></div>
+                </div>
+                <div class="btn-ctn">
+                    <div class="btn-action first-btn" onclick="previous()">
+                        <div>
+                            <span>
+                                <img src="./content/icons/back.svg" alt="back">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="btn-action" onclick="rewind()">
+                        <div>
+                            <span>
+                                <img src="./content/icons/rewind.svg" alt="rewind">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="btn-play" onclick="toggleAudio()">
+                        <div>
+                            <span id="icon-play">
+                                <img src="./content/icons/play.svg" alt="play">
+                            </span>
+                            <span id="icon-pause" style="display: none">
+                                <img src="./content/icons/pause.svg" alt="pause">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="btn-action" onclick="forward()">
+                        <div>
+                            <span>
+                                <img src="./content/icons/forward.svg" alt="forward">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="btn-action" onclick="next()">
+                        <div>
+                            <span>
+                                <img src="./content/icons/next.svg" alt="next">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="btn-mute">
+                        <div>
+                            <span id="icon-vol-up">
+                                <img src="./content/icons/mute.svg" alt="mute">
+                            </span>
+                            <span id="icon-vol-mute" style="display: none">
+                                <img src="./content/icons/muted.svg" alt="muted">
+                            </span>
+                        </div>
+                        <div class="vol-container">
+                            <input type="range" min="0" max="100" value="100" class="vol-slider" onchange="setVolume()">
+                        </div>
+                    </div>
+                    <div class="btn-scroll">
+                        <img src="./content/icons/top.svg" alt="top">
+                    </div>
+                </div>
+            </div>
+			<div class="playlist-ctn"></div>
+		</div>
+	</div>
+	<div class="menu_btn">play</div>
+	<main data-barba="container" data-barba-namespace="sound">
+
+		<a href="./index.html" class="back_btn" data-barba-trigger="back_btn">back</a>
+		<div class="container">
+			<header class="work_page"></header>
+			<section class="content">
+				<div class="info"></div>
+				<div class="lyrics"></div>
+				<div class="video"></div>
+				<div class="more"></div>
+			</section>
+			<a href="./index.html" class="footer footer_sound" data-barba-trigger="back_btn">Jesus is King</a>
+			<footer class="next_page"></footer>
+		</div>
+
+	</main>
+
+	<script src="./assets/js/barba.js"></script>
+	<script src="./assets/js/data.js"></script>
+	<script src="./assets/js/main.js"></script>
+</body>
+
+</html>
